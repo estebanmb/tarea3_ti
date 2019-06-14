@@ -1,0 +1,15 @@
+aniso8601
+APScheduler
+beautifulsoup4
+blinker
+whitenoise
+pytz
+dj-database-url
+gunicorn
+psycopg2
+Django
+django-cors-headers
+django-environ
+djangorestframework
+requests
+urllib3

@@ -1,0 +1,55 @@
+<!DOCTYPE html >
+<html>
+  <head>
+      <style type="text/css">
+          body {
+   color: white;
+   background-color: black
+    }
+   /* th {
+  background-color: #4CAF50;
+  color: white;
+} */
+ </style>
+  </head>
+  <body>
+<h1>  Personaje </h1>
+
+<h2>  {{Personajes.name}} </h2>
+<dl>
+  {% for key, value in Personajes.items %}
+        <br>
+      {% if key == "homeworld" %}
+        <dt>Planeta de nacimiento:</dt>
+        {% for id, name in value.items %}
+          <dd>  <a href="/planets/{{id}}"> {{name}} </a> </dd>
+        {% endfor %}
+      {% elif key == "filmConnection" %}
+        <dt>Peliculas en las que aparece:</dt>
+        {% for id, title in value.items %}
+          <dd>  <a href="/films/{{id}}"> {{title}}</a> </dd>
+        {% endfor %}
+
+      {% elif key == "starshipConnection" %}
+        <dt>Naves piloteadas:</dt>
+        {% for id, name in value.items %}
+          <dd>  <a href="/starships/{{id}}"> {{name}}</a> </dd>
+        {% endfor %}
+
+        {% elif key == "id"%}
+
+
+      {% else %}
+      <dt>  {{key}}:   {{value}} </dt>
+
+
+      {% endif %}
+
+  {% endfor %}
+</dl>
+
+<form action="/">
+   <button type="submit">Pagina Principal</button>
+</form>
+</body>
+</html>

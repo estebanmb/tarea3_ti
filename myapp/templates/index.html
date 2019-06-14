@@ -1,0 +1,45 @@
+<!DOCTYPE html >
+<html>
+  <head>
+      <style type="text/css">
+          body {
+   color: white;
+   background-color: black}
+   /* th {
+  background-color: #4CAF50;
+  color: white;
+} */
+ </style>
+  </head>
+  <body>
+
+
+      <h1>Vienvenid@ a swapix </h1>
+
+      <br>
+      <h2>Peliculas de <hard>Start Wars</hard> </h2>
+      <h4>Selecciona tu pelicula favorita para ver mas informacion</h4>
+<table style="width:100%">
+    <tr>
+        <th align = "center"> <hard>Title</hard></th>
+        <th align = "center"> <hard>Year</hard> </th>
+        <th align = "center"> <hard>Director</hard></th>
+        <th align = "center"> <hard>Producers</hard> </th>
+        <th align = "center"> <hard>Episode</hard> </th>
+        <!-- <th align = "center"> id </th> -->
+    </tr>
+  {% for pelicula in peliculas %}
+  <tr>
+      <th align = "center"> <a href="/films/{{pelicula.id}}"> {{pelicula.title}}</a> </th>
+      <th align = "center"> {{pelicula.year}} </th>
+      <th align = "center"> {{pelicula.director}} </th>
+      <th align = "center"> {{pelicula.productor}} </th>
+      <th align = "center"> {{pelicula.episodio}} </th>
+      <!-- <th align = "left"> {{pelicula.id}} </th> -->
+  </tr>
+  {% endfor %}
+</table>
+
+
+  </body>
+</html>
